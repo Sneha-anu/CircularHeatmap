@@ -13,6 +13,7 @@ Run "npm install" and use the
 Here the dataTemp holds the temperature value of the sensors with their respective location at x and y. Note: the length of x, y and data must be equal.
 
 # Sample data
+
 x = [
       0,
       -0.14130648,
@@ -36,6 +37,8 @@ x = [
       0.49,
       0.346482323,
     ];
+    
+    
     y = [
       0,
       0.081583335,
@@ -59,6 +62,8 @@ x = [
       0,
       0.346482322,
     ];
+    
+    
     data = [
       24.23149299621582,
       24.517847061157227,
