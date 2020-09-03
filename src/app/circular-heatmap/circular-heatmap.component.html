@@ -1,0 +1,86 @@
+<div style="display: flex; flex-direction: column;padding: 5px; border: 1px rgb(12, 12, 12);">
+
+    <div style="display: flex; flex-direction: row;">
+      <plotly-plot
+      *ngIf="!show3DGraph"
+        [data]="graph.data"
+        [layout]="graph.layout"
+        (contextmenu)="renderContextMenuItems($event)"
+      ></plotly-plot>
+      <div
+        style="visibility: hidden; position: fixed;"
+        [style.left]="contextMenuPosition.x"
+        [style.top]="contextMenuPosition.y"
+        [matMenuTriggerFor]="contextMenu"
+      ></div>
+      <mat-menu #contextMenu="matMenu">
+        <ng-template matMenuContent>
+          <button mat-menu-item (click)="onContextMenuAction(true)">
+            Auto Scale
+          </button>
+          <button mat-menu-item (click)="onContextMenuAction(false)">
+            Set Scale
+          </button>
+        </ng-template>
+      </mat-menu>
+      <div *ngIf="show3DGraph">
+        <plotly-plot
+          [data]="threeDGraph.data"
+          [layout]="threeDGraph.layout"
+        ></plotly-plot>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+      <mat-checkbox
+          class="example-margin"
+          [checked]="isAutoScale"
+          (change)="showAutoScale()"
+          >Auto Scale</mat-checkbox
+        >
+        <mat-checkbox
+          class="example-margin"
+          (change)="showcurrent3DGraph()"
+          >Show 3D graph</mat-checkbox
+        >
+        <mat-checkbox
+          class="example-margin"
+          [checked]="isFixedNotch"
+          (change)="changeFixedNotch()"
+          >Fixed Notch</mat-checkbox
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="degree"
+          *ngIf="!isFixedNotch"
+        />
+        <button
+          style="margin-left: 20px;"
+          (click)="rotateDegree()"
+          *ngIf="!isFixedNotch"
+        >
+          Notch
+        </button>
+    </div>
+    <div>
+      <mat-checkbox
+        class="example-margin"
+        type="checkbox"
+        id="data-overlay"
+        name="data-overlay"
+        [checked]="dataOverlay"
+        (change)="dataOverlayChange()"
+      > Data Overlay </mat-checkbox>
+      <mat-checkbox
+        class="example-margin"
+        type="checkbox"
+        id="contour"
+        name="contour"
+        [checked]="isContour"
+        (change)="contourChange()"
+      > Contour </mat-checkbox>
+  
+    </div>
+  </div>
+  
