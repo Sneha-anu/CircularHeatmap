@@ -10,7 +10,7 @@ Here the dataTemp holds the temperature or radiation level with their respective
 
 ![picture](https://github.com/Sneha-anu/CircularHeatmap/blob/master/newplot%20(6).png)
 
-# Sample data
+## Sample data
     
     x = [
       0,
