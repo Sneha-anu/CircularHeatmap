@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Set Scale</h2>
+<mat-dialog-content class="mat-typography">
+    <table class="example-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Min</mat-label>
+          <input type="number" [(ngModel)]="data.min" matInput>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Max</mat-label>
+          <input type="number" [(ngModel)]="data.max" matInput>
+        </mat-form-field></td>
+      </tr></table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Update</button>
+  </mat-dialog-actions>
