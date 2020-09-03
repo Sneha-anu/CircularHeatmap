@@ -8,6 +8,8 @@ Run "npm install" and use the
 
 Here the dataTemp holds the temperature or radiation level with their respective location at x and y. Note: the length of x, y and data must be equal.
 
+![picture](https://github.com/Sneha-anu/CircularHeatmap/blob/master/newplot%20(6).png)
+
 # Sample data
     
     x = [
