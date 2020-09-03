@@ -1,0 +1,14 @@
+<div style="display: flex; flex-direction: row">
+  <a class="pad-5" href="#" (click)="loadData(defaultData)">mission 1</a>
+  <a class="pad-5" href="#" (click)="loadData(data1)">mission 2</a>
+  <a class="pad-5" href="#" (click)="loadData(data2)">mission 3</a>
+  <a class="pad-5" href="#" (click)="loadData(data3)">mission 4</a>
+  <a class="pad-5" href="#" (click)="loadData(data4)">mission 5</a>
+</div>
+<app-circular-heatmap
+  *ngIf="data21"
+  [dataTemp]="data21"
+  [x]="x21"
+  [y]="y21"
+  [setInterpolate]="setInterpolate"
+></app-circular-heatmap>
