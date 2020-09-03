@@ -1,27 +1,84 @@
 # CircularHeatmap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+To use the circular heatmap for the appliction, download the project. 
 
-## Development server
+Run "npm install" and use the 
+*<app-circular-heatmap
+  *ngIf="data"
+  [dataTemp]="data"
+  [x]="x"
+  [y]="y"
+></app-circular-heatmap>*
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Here the dataTemp holds the temperature value of the sensors with their respective location at x and y. Note: the length of x, y and data must be equal.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Sample data
+x = [
+      0,
+      -0.14130648,
+      -0.141306481,
+      0.14130648,
+      0.141306481,
+      -0.231106073,
+      -0.315696767,
+      -0.315696768,
+      -0.231106075,
+      0.231106072,
+      0.315696767,
+      0.315696767,
+      0.231106074,
+      8.79e-10,
+      -0.346482322,
+      -0.49,
+      -0.346482324,
+      -2.64e-9,
+      0.346482321,
+      0.49,
+      0.346482323,
+    ];
+    y = [
+      0,
+      0.081583335,
+      -0.081583334,
+      -0.081583336,
+      0.081583335,
+      0.231106074,
+      0.084590695,
+      -0.084590693,
+      -0.231106072,
+      -0.231106075,
+      -0.084590696,
+      0.084590694,
+      0.231106073,
+      0.49,
+      0.346482324,
+      1.76e-9,
+      -0.346482321,
+      -0.49,
+      -0.346482325,
+      0,
+      0.346482322,
+    ];
+    data = [
+      24.23149299621582,
+      24.517847061157227,
+      24.266782760620117,
+      23.960380554199219,
+      24.255964279174805,
+      24.883913040161133,
+      24.651580810546875,
+      24.361774444580078,
+      24.052568435668945,
+      23.689409255981445,
+      23.725124359130859,
+      23.985544204711914,
+      24.316211700439453,
+      24.84832763671875,
+      24.939899444580078,
+      24.635990142822266,
+      23.941780090332031,
+      23.507240295410156,
+      23.506502151489258,
+      23.656068801879883,
+      24.2712459564209,
+    ];
