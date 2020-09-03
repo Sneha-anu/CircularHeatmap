@@ -1,20 +1,16 @@
-# CircularHeatmap
+# Circular Heatmap
 
 To use the circular heatmap for the appliction, download the project. 
 
-Run "npm install" and use the 
-*<app-circular-heatmap
-  *ngIf="data"
-  [dataTemp]="data"
-  [x]="x"
-  [y]="y"
-></app-circular-heatmap>*
+Run "npm install" and use the
 
-Here the dataTemp holds the temperature value of the sensors with their respective location at x and y. Note: the length of x, y and data must be equal.
+<app-circular-heatmap *ngIf="data" [dataTemp]="data" [x]="x" [y]="y"></app-circular-heatmap>
+
+Here the dataTemp holds the temperature or radiation level with their respective location at x and y. Note: the length of x, y and data must be equal.
 
 # Sample data
-
-x = [
+    
+    x = [
       0,
       -0.14130648,
       -0.141306481,
@@ -37,7 +33,6 @@ x = [
       0.49,
       0.346482323,
     ];
-    
     
     y = [
       0,
